@@ -3,7 +3,7 @@ Repositório dedicado aos meu entendimento sobre o livro de entendendo algoritmo
 
 
 1. Estruturas de Dados Básicas:
-    - Listas (arrays)
+    - Listas (arrays) ✅
     - Pilhas (stacks)
     - Filas (queues)
     - Listas Ligadas (linked lists)
