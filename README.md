@@ -14,6 +14,5 @@
     - Merge Sort
 
 3. Algoritmos de Busca:
-    - Busca Linear
     - Busca Binária ✅
     - Busca em Árvores Binárias ✅
