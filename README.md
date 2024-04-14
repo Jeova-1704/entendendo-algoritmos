@@ -8,15 +8,12 @@
     - Grafos (graphs) ✅
 
 2. Algoritmos de Ordenação:
-    - Bubble Sort
-    - Insertion Sort
-    - Selection Sort
-    - Merge Sort
+    - Bubble Sort ✅
+    - Insertion Sort ✅
     - Quick Sort
-    - Radix Sort
+    - Merge Sort
 
 3. Algoritmos de Busca:
     - Busca Linear
     - Busca Binária ✅
     - Busca em Árvores Binárias ✅
-    - Busca em Grafos (DFS, BFS)
