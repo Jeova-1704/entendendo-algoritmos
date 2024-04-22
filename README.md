@@ -6,6 +6,7 @@
     - Pilhas (stacks) ✅
     - Filas (queues) ✅
     - Grafos (graphs) ✅
+    - Listas Encadeadas ✅
 
 2. Algoritmos de Ordenação:
     - Bubble Sort ✅
