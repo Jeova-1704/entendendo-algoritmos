@@ -40,38 +40,39 @@ class VetorNaoOrdenado:
             for i in range(self.ultima_posicao + 1):
                 print(i, " - ", self.valores[i])
 
-    #O(1)
+    # O(1)
     def insere(self, valor):
         if self.ultima_posicao == self.capacidade - 1:
             raise VetorMaxCapacidadeException("Capacidade maxima do vetor atingida")
 
         if not isinstance(valor, self.tipo):
-            raise VetorTipoException(f"Tipo do valor não compativél com o tipo do vetor! Apenas elementos do tipo {self.tipo} são permitidos")
-        
+            raise VetorTipoException(
+                f"Tipo do valor não compativél com o tipo do vetor! Apenas elementos do tipo {self.tipo} são permitidos"
+            )
+
         else:
             self.ultima_posicao += 1
             self.valores[self.ultima_posicao] = valor
-    
-    #O(n)
+
+    # O(n)
     def pesquisar(self, valor):
         for i in range(self.ultima_posicao + 1):
-            if (valor == self.valores[i]):
+            if valor == self.valores[i]:
                 return i
         return None
-    
-    #O(n)
+
+    # O(n)
     def excluir(self, valor):
         posicao = self.pesquisar(valor)
-        
-        if (posicao == None):
+
+        if posicao == None:
             return None
-        
+
         else:
             for i in range(posicao, self.ultima_posicao - 1):
                 self.valores[i] = self.valores[i + 1]
-                
+
             self.ultima_posicao -= 1
-        
 
 
 if __name__ == "__main__":
@@ -87,5 +88,3 @@ if __name__ == "__main__":
     vetor.excluir(6)
     vetor.imprime()
     print(vetor.ultima_posicao)
-    
-    

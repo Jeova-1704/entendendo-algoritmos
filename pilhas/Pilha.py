@@ -1,36 +1,45 @@
-class Pilhas:
-    def __init__(self) -> None:
-        self.__pilha = list()
-        
-    def adiciona(self, item):
-        self.__pilha.append(item)
-        
-    def pop(self):
-        if self.isEmpty():
-            raise Exception("A pilha está vazia.")
-        ultimoIndex = self.__getUltimoElemento()
-        return self.__pilha.pop(ultimoIndex)
-        
-    
-    def peek(self):
-        if self.isEmpty():
-            raise Exception("A pilha está vazia.")
-        ultimoIndex = self.__getUltimoElemento()
-        return self.__pilha[ultimoIndex]
-    
+import numpy as np
+
+
+class Pilha:
+
+    def __init__(self, capacidade):
+        self.__capacidade = capacidade
+        self.__topo = -1
+        self.__valores = np.empty(self.__capacidade, dtype=int)
+
+    def __valores_cheia(self):
+        return self.__topo == self.__capacidade - 1
+
+    def __valores_vazia(self):
+        return self.__topo == -1
+
+    def empilhar(self, valor):
+        if self.__valores_cheia():
+            print("A pilha está cheia")
+        else:
+            self.__topo += 1
+            self.__valores[self.__topo] = valor
+
+    def desempilhar(self):
+        if self.__valores_vazia():
+            print("A pilha está vazia")
+        else:
+            self.__topo -= 1
+
+    def ver_topo(self):
+        if self.__valores_vazia():
+            return -1
+        return self.__valores[self.__topo]
+
     def isEmpty(self):
-        if(self.__pilha == []):
-            return True
-        return False;
-    
+        return self.__valores_vazia()
+
     def size(self):
-        return len(self.__pilha)
-    
+        return self.__topo + 1
+
     def clear(self):
-        self.__pilha = list()
-    
-    def __getUltimoElemento(self):
-        return len(self.__pilha) - 1
-    
+        self.__topo = -1
+
     def __str__(self) -> str:
-        return str(self.__pilha)
+        return str(self.__valores[: self.__topo + 1])
