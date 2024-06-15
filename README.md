@@ -35,6 +35,6 @@
 11. listas ordenadas ✅
 12. listas encadeadas ✅
 13. analise de algoritmos ✅
-14. BIG o Big ômega e Big Theta ✅
+14. BIG o Big ômega e Big Theta ✅  
 15. arvores binárias 
 16. Busca em arvore binária 
